@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root{
+  --base-color: #31c9c9
+}
+
+*{
+  position: relative;
+  padding: 0;
+  margin: 0;
+  inset: 0;
+  font-family: arial;
+  box-sizing: border-box;
+  color: #2c2c2d;
+  font-family: Inter;
+}
+
+body{
+  height: 100svh;
+}
+
+nav{
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  background: #31c9c9;
+  box-shadow: 0 0 9px #0000004b;
+}
+
+nav > span{
+  font-size: 20px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.burger{
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.burger > span{
+  height: 3px;
+  width: 34px;
+  background: white;
+}
+
+header{
+  background: #cecece4b;
+  padding: 1rem;
+}
+
+.slide{
+  width: 100wh;
+  background: red;
+  border-radius: 3svw;
+  overflow: hidden;
+}
+
+.slide img{
+  width: 100%;
+}
+
+main{
+  padding: 1rem;
+  padding-top: 2rem;
+  h1{
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 1rem;
+  }
+  .opsi_login{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    margin: 1rem 0;
+    button{
+      width: 100%;
+      padding: .8rem .4rem;
+      border: none;
+      border-radius: 100vw;
+    }
+    .active{
+      background: var(--base-color);
+      color: white;
+    }
+  }
+  form{
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    input[type=text]{
+      padding: 1rem;
+      border-radius: .3rem;
+      border: 2px solid hsl(191,70%,54.3%);
+      transition: .2s;
+    }
+    input:focus{
+      outline: 3px solid #88dcef;
+    }
+    span{
+      margin-bottom: 1rem;
+    }
+    label{
+      display: flex;
+      flex-direction: column;
+    }
+    button{
+      padding: 1rem;
+      border: none;
+      border-radius: .4rem;
+      background: var(--base-color);
+      color: white;
+      transition: .3s linear;
+    }
+    button:active, button:focus{
+      background: #1d7b7b;
+    }
+  }
+}
+
+footer{
+  position: fixed;
+  height: 70px;
+  top: calc(100svh - 70px);
+  background: var(--base-color);
+  display: flex;
+  padding: 1rem;
+  justify-content: space-around;
+  gap: 1rem;
+  button{
+    width: 100%;
+    color: white;
+    background: 0;
+    font-size: 20px;
+    border: 0;
+    ion-icon{
+      color: white;
+    }
+  }
+}
+
+@media (height: 90svh){
+  footer{
+    background: red;
+    
+  }
+}
