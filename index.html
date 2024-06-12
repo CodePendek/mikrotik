@@ -1,47 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css" title="" type="" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <nav>
-    <span>Kost biru</span>
-    <div class="burger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+<body class="bg-slate-100 text-slate-700">
+  <nav class="bg-sky-400 py-3 shadow-lg px-4 flex justify-between items-center">
+    <a href="Kios Biru" class="font-bold text-xl text-white">Kios Biru</a>
+    <ion-icon name=menu class="text-white text-2xl"></ion-icon>
   </nav>
-  <header>
-    <div class="slide">
-      <img src="img/slide.jpg" alt="slide" />
+  
+  <header class="bg-slate-200 p-5">
+    <div class="rounded-xl overflow-hidden">
+      <img src="img/slide.jpg" alt="" />
     </div>
   </header>
-  <main>
-    <h1>Silahkan login</h1>
-    <div class="opsi_login">
-      <button class="active">Voucher</button>
-      <button>Qr code</button>
+  
+  <main class="p-3">
+    <span class="text-xl font-semibold block my-3">Login hotspot</span>
+    <div id="group" class="flex justify-around py-3 gap-3">
+      <span class="rounded-xl text-sm py-2 w-full text-center bg-slate-200 text-slate-700">Voucher</span>
+      <span class="rounded-xl text-sm py-2 w-full text-center bg-sky-400 text-slate-700 text-white"><a href="https://laksa19.github.io/myqr">Qr code</a></span>
     </div>
     <form action="" method="get" accept-charset="utf-8">
-      <label>
-        <input type="text" name="voucher" id="voucher" value="" placeholder="Masukkan voucher" />
+      <label class="flex items-center">
+        <ion-icon class="absolute text-xl text shadow-slate-500 left-[2rem]" name=key-outline></ion-icon>
+        <input type="text" placeholder="Masukkan kode voucher" class="bg-inherit focus:outline-cyan-400 border border-slate-300 w-full shadow-md p-3 pl-[4rem] rounded-xl"/>
       </label>
-      <button type="submit">Masuk</button>
+        <button type="submit" class="p-3 bg-sky-400 text-white text-sm mt-5 w-full shadow-md hover:bg-cyan-600 active:bg-cyan-600 block rounded-xl">Masuk</button>
     </form>
   </main>
-  <footer>
-    <button><ion-icon name="home-outline"></ion-icon></button>
-    <button><ion-icon name=cash-outline></ion-icon></button>
-    <button><ion-icon name=call-outline></ion-icon></button>
-    <button><ion-icon name=information-circle-outline></ion-icon></button>
+  
+  <footer class="bg-sky-800 w-full bottom-0 flex fixed justify-around p-3 py-5 text-white">
+    <ion-icon class="text-2xl" name=home></ion-icon>
+    <ion-icon class="text-2xl" name=ticket id="ticket"></ion-icon>
+    <ion-icon class="text-2xl" name=chatbubble-ellipses></ion-icon>
+    <ion-icon class="text-2xl" name=information-circle></ion-icon>
   </footer>
   
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <dialog class="ticket w-full p-1 backdrop-blur outline-0 p-5 rounded-md ring-1 ring-cyan-600 shadow-lg">
+    <div id="close" class="text-4xl absolute top-0 p-3 right-0">&times;</div>
+    <h1 class="text-2xl mb-2 block">Daftar harga</h1>
+    
+    <table border="1" class="w-full mt-4">
+      <tr class="text-xs rounded-xl mb-8 text-slate-700 bg-slate-300">
+        <th class="rounded-l-lg">#</th>
+        <th>Durasi</th>
+        <th class="rounded-r-lg">Harga</th>
+      </tr>
+      <tr class="text-center">
+        <td>1</td>
+        <td>2 jam</td>
+        <td>Rp. 2000</td>
+      </tr>
+      <tr class="text-center">
+        <td>2</td>
+        <td>6 jam</td>
+        <td>Rp. 5.000</td>
+      </tr>
+      <tr class="text-center">
+        <td>3</td>
+        <td>12 jam</td>
+        <td>Rp. 10.000</td>
+      </tr>
+      <tr class="text-center">
+        <td>4</td>
+        <td>24 jam</td>
+        <td>Rp. 20.000</td>
+      </tr>
+    </table>
+    
+    <button id="beli" class="bg-sky-400 p-2 shadow-md w-full mt-5 outline-0 text-white rounded-xl">Beli</button>
+  </dialog>
+  
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="script.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

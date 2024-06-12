@@ -1,0 +1,20 @@
+th{
+  padding: .5rem 0;
+  margin-bottom: 3rem;
+}
+
+dialog::backdrop{
+  backdrop-filter: blur(100px);
+}
+
+table tr th{
+  margin-bottom: 1rem;
+}
+
+table tr td{
+  padding-top: 1rem;
+}
+
+#group span{
+  padding: .7rem 0;
+}

@@ -1,12 +1,12 @@
-const modal = document.querySelector("dialog")
-const btnModal = document.querySelector(".open")
-const btnClose = document.querySelector(".close")
+const ticket = document.getElementById("ticket")
 
+const close = document.querySelectorAll("#close")
+ticket.addEventListener("click", ()=>{
+  document.querySelector(".ticket").showModal()
+})
 
-btnModal.addEventListener("click", ()=>{
-  modal.showModal()
-} )
-
-btnClose.addEventListener("click", ()=>{
-  modal.close()
+close.forEach(c => {
+  c.addEventListener('click', (e)=>{
+    e.target.parentElement.close()
+  })
 })
